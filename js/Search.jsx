@@ -15,7 +15,7 @@ class Search extends Component {
     return (
       <div className="search">
         <header>
-          <h1>svideo</h1>
+          <h1>miniflix</h1>
           <input
             onChange={this.handleSearchTermChange}
             value={this.state.searchTerm}
@@ -29,7 +29,7 @@ class Search extends Component {
               show =>
                 `${show.title} ${show.description}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0
             )
-            .map(show => <ShowCard key={show.imdID} {...show} />)}
+            .map(show => <ShowCard key={show.imdbID} {...show} />)}
           ;
         </div>
       </div>

@@ -5,8 +5,14 @@
     "lint": "./node_modules/.bin/eslint **/*.{js,jsx} --quiet",
     "build": "webpack",
     "watch": "webpack --watch",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:update": "jest -u",
     "server": "./node_modules/.bin/webpack-dev-server"
     
+  },
+  "jest": {
+    "snapshotSerializers": ["jest-serializer-enzyme"]
   },
   "dependencies": {
     "axios": "0.16.1",
